@@ -7,6 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   mongoose.connect(process.env.MONGODB_URI);
+
   const { name, email, subject, message } = req.body;
   if (req.method === "POST") {
     try {
