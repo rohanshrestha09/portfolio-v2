@@ -8,7 +8,7 @@ const Nav: React.FC = () => {
       <div className="sm:text-xl text-[0.79rem] breadcrumbs">
         <ul>
           <li>
-            <RiHome2Line className="mr-2" />
+            <RiHome2Line className="mr-2" size={24} />
             <a href="#about">Home</a>
           </li>
           <li>
