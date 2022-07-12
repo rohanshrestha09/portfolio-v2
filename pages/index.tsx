@@ -13,8 +13,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Rohan Shrestha</title>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-        <script defer>AOS.init()</script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>AOS.init()</script>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
