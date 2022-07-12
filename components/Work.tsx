@@ -104,7 +104,7 @@ const Work: React.FC = () => {
               index % 2 === 0 ? "right-0" : "left-0"
             } mt-8 rounded-xl`}
           />
-          <div className="card xl:card-side bg-base-100 shadow-xl xl:w-3/4 w-full h-full">
+          <div className="card xl:card-side bg-base-100 xl:w-3/4 w-full h-full">
             <figure className="h-3/4 sm:h-1/2">
               <img
                 src={element.imgSrc}
