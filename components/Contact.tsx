@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
       id="contact"
     >
       <form
-        className="mockup-code before:w-[0.9rem] before:h-[0.9rem] overflow-hidden h-[72vh] bg-transparent flex flex-col justify-between"
+        className="mockup-code before:w-[0.9rem] before:h-[0.9rem] overflow-hidden bg-transparent flex flex-col md:gap-[2.45rem] gap-[2.15rem]"
         onSubmit={formSubmission}
       >
         <pre

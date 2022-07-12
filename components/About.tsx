@@ -6,7 +6,7 @@ const About: React.FC = () => {
       className="w-full min-h-screen flex items-center overflow-hidden"
       id="about"
     >
-      <div className="mockup-code overflow-hidden before:w-[0.9rem] before:h-[0.9rem] sm:h-[70vh] h-[75vh] bg-transparent flex flex-col justify-between">
+      <div className="mockup-code overflow-hidden before:w-[0.9rem] before:h-[0.9rem] sm:h-[70vh] bg-transparent flex md:gap-[3.81rem] gap-[2.15rem] flex-col">
         <pre data-prefix="$" className="md:text-[2rem] text-xl">
           <code className="text-md md:text-[1.7rem]">जोजोल्पा!</code>
         </pre>
