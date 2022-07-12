@@ -38,9 +38,11 @@ const About: React.FC = () => {
         >
           <code className="md:inline-flex">
             Get in touch:
-            <p className="hover:bg-rose-500 hover:text-white underline underline-offset-8 md:px-1 transition-all cursor-pointer">
-              shresthacr11@gmail.com
-            </p>
+            <a href="mailto:shresthacr11@gmail.com" target="_blank">
+              <p className="hover:bg-rose-500 hover:text-white underline underline-offset-8 md:px-1 transition-all cursor-pointer">
+                shresthacr11@gmail.com
+              </p>
+            </a>
           </code>
         </div>
         <pre
