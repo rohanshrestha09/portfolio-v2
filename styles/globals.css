@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Satisfy&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+.animation {
+  border-right: solid 5px rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animated-text 3.5s linear 0.5s 1 normal both,
+    animated-cursor 700ms linear infinite;
+}
+
+@keyframes animated-text {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 360px;
+  }
+}
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  @keyframes animated-text {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 250px;
+    }
+  }
+}
+
+.mockup-code pre[data-prefix]:before {
+  width: 0;
+}
+
+.mockup-code:before {
+  margin-left: -22px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(40, 42, 57);
+}
+
+::-webkit-scrollbar-track {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(170, 170, 170);
+  border-radius: 10px;
+}
+
+/* scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(170 170 170 / 0.5);
+}
