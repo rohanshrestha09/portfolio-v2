@@ -6,10 +6,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  mongoose.connect(
-    process.env.MONGODB_URI ||
-      "mongodb+srv://shrestha_7001:Sensei.20030908@cluster0.xlj7p.mongodb.net/Contact?retryWrites=true&w=majority"
-  );
+  mongoose.connect(process.env.MONGODB_URI);
+
   const { name, email, subject, message } = req.body;
   if (req.method === "POST") {
     try {

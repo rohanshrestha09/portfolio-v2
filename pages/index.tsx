@@ -19,7 +19,6 @@ const Home: NextPage = () => {
         <title>Rohan Shrestha</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Nav />
       <About />
       <Skills />
