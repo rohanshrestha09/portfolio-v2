@@ -6,6 +6,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  // @ts-ignore
   mongoose.connect(process.env.MONGODB_URI);
 
   const { name, email, subject, message } = req.body;
