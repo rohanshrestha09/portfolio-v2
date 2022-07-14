@@ -55,6 +55,7 @@ const Contact: React.FC = () => {
           data-prefix="$"
           className="md:text-[2rem] text-xl"
           data-aos="zoom-out"
+          data-aos-duration="800"
         >
           <code>Contact Me</code>
         </pre>
