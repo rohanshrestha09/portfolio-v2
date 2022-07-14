@@ -15,7 +15,6 @@ const Contact: React.FC = () => {
     subject: "",
     message: "",
   });
-  const [messageSent, setMessageSent] = useState<boolean>(true);
 
   const { name, email, subject, message } = userdata;
 
@@ -28,7 +27,6 @@ const Contact: React.FC = () => {
     event.preventDefault();
     try {
       if (name && email && subject && message) {
-        setMessageSent(false);
         const { status } = await axios.post("/api/contact", userdata);
         if (status === 201) {
           setUserdata({
@@ -37,7 +35,6 @@ const Contact: React.FC = () => {
             subject: "",
             message: "",
           });
-          setMessageSent(true);
         }
       }
     } catch (err: any) {
@@ -52,7 +49,7 @@ const Contact: React.FC = () => {
     >
       <form
         className="mockup-code before:w-[0.9rem] before:h-[0.9rem] overflow-hidden bg-transparent flex flex-col md:gap-[2.45rem] gap-[2.15rem]"
-        onSubmit={(e) => messageSent && formSubmission(e)}
+        onSubmit={formSubmission}
       >
         <pre
           data-prefix="$"
