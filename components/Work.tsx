@@ -25,7 +25,7 @@ const Work: React.FC = () => {
       title: "Patra",
       desc: "A realtime messaging web application built with MERN & socket.io.",
       githublink: "https://github.com/rohanshrestha09/Patra",
-      livelink: "https://patra-nestjs.herokuapp.com",
+      livelink: "https://patranp.herokuapp.com",
       icons: [
         <SiMongodb size={21} title="MongoDB" />,
         <SiReact size={21} title="React" />,
