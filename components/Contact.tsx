@@ -4,12 +4,18 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import "aos/dist/aos.css";
 
 const Contact: React.FC = () => {
-  const [userdata, setUserdata] = useState({
+  const [userdata, setUserdata] = useState<{
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  }>({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+  const [messageSent, setMessageSent] = useState<boolean>(true);
 
   const { name, email, subject, message } = userdata;
 
@@ -18,17 +24,22 @@ const Contact: React.FC = () => {
     setUserdata({ ...userdata, [name]: value });
   };
 
-  const formSubmission = async (event: React.SyntheticEvent) => {
+  const formSubmission = async (event: React.SyntheticEvent): Promise<void> => {
     event.preventDefault();
     try {
-      const { status } = await axios.post("/api/contact", userdata);
-      if (status === 201)
-        setUserdata({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
+      if (name && email && subject && message) {
+        setMessageSent(false);
+        const { status } = await axios.post("/api/contact", userdata);
+        if (status === 201) {
+          setUserdata({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+          setMessageSent(true);
+        }
+      }
     } catch (err: any) {
       console.log(err.response.data);
     }
@@ -41,7 +52,7 @@ const Contact: React.FC = () => {
     >
       <form
         className="mockup-code before:w-[0.9rem] before:h-[0.9rem] overflow-hidden bg-transparent flex flex-col md:gap-[2.45rem] gap-[2.15rem]"
-        onSubmit={formSubmission}
+        onSubmit={(e) => messageSent && formSubmission(e)}
       >
         <pre
           data-prefix="$"
@@ -60,6 +71,7 @@ const Contact: React.FC = () => {
               name="name"
               value={name}
               onChange={onChange}
+              required
             />
           </code>
         </pre>
@@ -73,6 +85,7 @@ const Contact: React.FC = () => {
               name="email"
               value={email}
               onChange={onChange}
+              required
             />
           </code>
         </pre>
@@ -86,6 +99,7 @@ const Contact: React.FC = () => {
               name="subject"
               value={subject}
               onChange={onChange}
+              required
             />
           </code>
         </pre>
@@ -99,6 +113,7 @@ const Contact: React.FC = () => {
               name="message"
               value={message}
               onChange={onChange}
+              required
             />
           </code>
         </pre>
