@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A potfolio website built with Nextjs which describes about myself, presents my skills and projects.
+A potfolio website built with Nextjs, TailwindCSS, TypeScript which describes about myself, presents my skills and projects.
 
 ## About section
 
