@@ -4,7 +4,7 @@ import { BiGitBranch } from "react-icons/bi";
 
 const Nav: React.FC = () => {
   return (
-    <nav className="z-20 w-full fixed left-0 top-0 sm:h-[4rem] h-[3rem] flex items-end xl:px-44 lg:px-20 px-7 bg-[rgb(40,42,57)]">
+    <nav className="z-20 w-full fixed left-0 top-0 sm:h-[4rem] h-[3rem] flex items-end 2xl:px-72 xl:px-44 lg:px-20 px-7 bg-[rgb(40,42,57)]">
       <div className="sm:text-xl text-[0.79rem] breadcrumbs">
         <ul>
           <li>

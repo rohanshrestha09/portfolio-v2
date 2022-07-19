@@ -92,7 +92,7 @@ const Work: React.FC = () => {
         <div
           data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
           data-aos-duration="800"
-          className={`xl:w-full sm:w-[40rem] w-full xl:h-[32rem] sm:h-[35rem] h-[33rem] sm:my-8 my-4 flex ${
+          className={`xl:w-full sm:w-[40rem] w-full 2xl:h-[38rem] xl:h-[32rem] sm:h-[35rem] h-[33rem] sm:my-8 my-4 flex ${
             index % 2 === 0 ? "justify-start" : "justify-end"
           }`}
           key={index}
@@ -100,7 +100,7 @@ const Work: React.FC = () => {
           <img
             src={element.imgSrc}
             alt=""
-            className={`xl:block hidden absolute h-[25rem] w-[51%] z-10 ${
+            className={`xl:block hidden absolute 2xl:h-[31rem] xl:h-[25rem] w-[51%] z-10 ${
               index % 2 === 0 ? "right-0" : "left-0"
             } mt-8 rounded-xl`}
           />

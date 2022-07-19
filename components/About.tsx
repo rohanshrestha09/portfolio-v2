@@ -49,7 +49,7 @@ const About: React.FC = () => {
           data-prefix="~"
           className="transition-all text-success hover:bg-success hover:text-white md:text-[2rem] text-xl"
           data-aos="zoom-out"
-          data-aos-duration="1500"
+          data-aos-duration="800"
         >
           <code className="inline-flex">
             <a href="#works" className="flex items-center">
