@@ -2,6 +2,7 @@ import React from "react";
 import "aos/dist/aos.css";
 import {
   SiExpress,
+  SiFigma,
   SiMongodb,
   SiNestjs,
   SiNextdotjs,
@@ -74,6 +75,14 @@ const Work: React.FC = () => {
         <SiTypescript size={21} title="TypeScript" />,
       ],
     },
+    {
+      imgSrc: "/images/figma.png",
+      title: "Discord Clone",
+      desc: "Discord Clone done with Figma",
+      githublink: "https://github.com/rohanshrestha09/Discord-Figma",
+      livelink: "https://github.com/rohanshrestha09/Discord-Figma",
+      icons: [<SiFigma size={21} title="Figma" />],
+    },
   ];
   return (
     <div
@@ -100,11 +109,11 @@ const Work: React.FC = () => {
           <img
             src={element.imgSrc}
             alt=""
-            className={`xl:block hidden absolute 2xl:h-[31rem] xl:h-[25rem] w-[51%] z-10 ${
+            className={`xl:block hidden absolute 2xl:h-[31rem] xl:h-[25rem] w-[53%] z-10 ${
               index % 2 === 0 ? "right-0" : "left-0"
             } mt-8 rounded-xl`}
           />
-          <div className="card xl:card-side xl:w-3/4 w-full h-full bg-[#2A303C]">
+          <div className="card xl:card-side xl:w-[70%] w-full h-full bg-[#2A303C]">
             <figure className="h-3/4 sm:h-1/2">
               <img
                 src={element.imgSrc}
