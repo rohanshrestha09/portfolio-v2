@@ -164,11 +164,7 @@ const Work: React.FC = () => {
                   index % 2 === 0 ? "xl:justify-end" : "xl:justify-start"
                 } items-center`}
               >
-                <div
-                  className={`flex justify-between ${
-                    (index === 0 || index === 1) && "w-56"
-                  } ${(index === 2 || index === 3) && "w-24"}`}
-                >
+                <div className={`flex gap-5`}>
                   {element.icons.map((el: any, index: number) => (
                     <span key={index}>{el}</span>
                   ))}
