@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import {
   SiExpress,
   SiFigma,
+  SiJquery,
   SiMongodb,
   SiNestjs,
   SiNextdotjs,
@@ -78,10 +79,14 @@ const Work: React.FC = () => {
     {
       imgSrc: "/images/figma.png",
       title: "Discord Clone",
-      desc: "Discord Clone done with Figma",
-      githublink: "https://github.com/rohanshrestha09/Discord-Figma",
-      livelink: "https://github.com/rohanshrestha09/Discord-Figma",
-      icons: [<SiFigma size={21} title="Figma" />],
+      desc: "Discord Clone done with Figma, TailwindCSS and Jquery",
+      githublink: "https://github.com/rohanshrestha09/Discord",
+      livelink: "https://discord-virid.vercel.app/",
+      icons: [
+        <SiFigma size={21} title="Figma" />,
+        <SiTailwindcss size={21} title="TailwindCSS" />,
+        <SiJquery size={21} title="TailwindCSS" />,
+      ],
     },
   ];
   return (
