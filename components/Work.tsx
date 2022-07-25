@@ -77,7 +77,7 @@ const Work: React.FC = () => {
       ],
     },
     {
-      imgSrc: "/images/figma.png",
+      imgSrc: "/images/discord.png",
       title: "Discord Clone",
       desc: "Discord Clone done with Figma, TailwindCSS and Jquery",
       githublink: "https://github.com/rohanshrestha09/Discord",
