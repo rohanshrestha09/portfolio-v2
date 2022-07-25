@@ -85,7 +85,7 @@ const Work: React.FC = () => {
       icons: [
         <SiFigma size={21} title="Figma" />,
         <SiTailwindcss size={21} title="TailwindCSS" />,
-        <SiJquery size={21} title="TailwindCSS" />,
+        <SiJquery size={21} title="Jquery" />,
       ],
     },
   ];
