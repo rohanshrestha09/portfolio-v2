@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useMutation } from "@tanstack/react-query";
 import { RiArrowRightSLine } from "react-icons/ri";
 import "aos/dist/aos.css";
 
@@ -23,24 +24,31 @@ const Contact: React.FC = () => {
     setUserdata({ ...userdata, [name]: value });
   };
 
-  const formSubmission = async (event: React.SyntheticEvent): Promise<void> => {
+  const formSubmission = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    try {
-      if (name && email && subject && message) {
-        const { status } = await axios.post("/api/contact", userdata);
-        if (status === 201) {
-          setUserdata({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-          });
-        }
-      }
-    } catch (err: any) {
-      console.log(err.response.data);
-    }
+    handleFormSubmission.mutate(userdata);
   };
+
+  const handleFormSubmission = useMutation(
+    async (data: {
+      name: string;
+      email: string;
+      subject: string;
+      message: string;
+    }) => {
+      const res = await axios.post("/api/contact", data);
+      return res.data;
+    },
+    {
+      onSuccess: () =>
+        setUserdata({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        }),
+    }
+  );
 
   return (
     <div
@@ -121,11 +129,13 @@ const Contact: React.FC = () => {
         >
           <code className="inline-flex">
             <div className="flex items-center">
-              <input
+              <button
                 type="submit"
-                value="Send Message"
                 className="cursor-pointer"
-              />
+                disabled={handleFormSubmission.isLoading}
+              >
+                Send Message
+              </button>
 
               <RiArrowRightSLine />
             </div>
