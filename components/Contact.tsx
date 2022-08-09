@@ -24,11 +24,6 @@ const Contact: React.FC = () => {
     setUserdata({ ...userdata, [name]: value });
   };
 
-  const formSubmission = (event: React.SyntheticEvent) => {
-    event.preventDefault();
-    handleFormSubmission.mutate(userdata);
-  };
-
   const handleFormSubmission = useMutation(
     async (data: {
       name: string;
@@ -57,7 +52,10 @@ const Contact: React.FC = () => {
     >
       <form
         className="mockup-code before:w-[0.9rem] before:h-[0.9rem] overflow-hidden bg-transparent flex flex-col md:gap-[2.45rem] gap-[2.15rem]"
-        onSubmit={formSubmission}
+        onSubmit={(event: React.SyntheticEvent) => {
+          event.preventDefault();
+          handleFormSubmission.mutate(userdata);
+        }}
       >
         <pre
           data-prefix="$"
