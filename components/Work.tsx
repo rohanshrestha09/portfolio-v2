@@ -20,6 +20,8 @@ const Work: React.FC = () => {
     desc: string;
     githublink: string;
     githublink2?: string;
+    alter?: string;
+    alter2?: string;
     livelink: string;
     icons: any[];
   }[] = [
@@ -29,6 +31,8 @@ const Work: React.FC = () => {
       desc: 'A realtime messaging web application built with MERN & socket.io.',
       githublink: 'https://github.com/rohanshrestha09/Patra',
       githublink2: 'https://github.com/rohanshrestha09/Patra-Nest',
+      alter: '(with Express)',
+      alter2: '(with Nest)',
       livelink: 'https://patranp.herokuapp.com',
       icons: [
         <SiMongodb size={21} title='MongoDB' />,
@@ -69,7 +73,7 @@ const Work: React.FC = () => {
     {
       imgSrc: '/images/insta.png',
       title: 'Instagram Clone',
-      desc: 'Instagram Clone made with Nextjs, TypeScript, TailwindCSS',
+      desc: 'Responsive Instagram Clone made with Next, TypeScript, TailwindCSS',
       githublink: 'https://github.com/rohanshrestha09/Instagram-Clone',
       livelink: 'https://igt-clone.vercel.app',
       icons: [
@@ -88,6 +92,19 @@ const Work: React.FC = () => {
         <SiFigma size={21} title='Figma' />,
         <SiTailwindcss size={21} title='TailwindCSS' />,
         <SiJquery size={21} title='Jquery' />,
+      ],
+    },
+    {
+      imgSrc: '/images/portfolio2.png',
+      title: 'Portfolio Website',
+      desc: 'Simple responsive portfolio website designed for my friend with React and Express',
+      githublink: 'https://github.com/rohanshrestha09/Portfolio',
+      livelink: 'https://rohanshrestha09.vercel.app/',
+      icons: [
+        <SiReact size={21} title='React' />,
+        <SiTailwindcss size={21} title='TailwindCSS' />,
+        <FaNode size={21} title='Node' />,
+        <SiExpress size={21} title='Express' />,
       ],
     },
   ];
@@ -144,18 +161,18 @@ const Work: React.FC = () => {
                 >
                   <code>
                     <a href={element.githublink} target='_blank'>
-                      Check Repository (with Express)
+                      {`Check Repository ${element.alter ? element.alter : ''}`}
                     </a>
                   </code>
                 </pre>
-                {element.title === 'Patra' && (
+                {element.alter2 && (
                   <pre
                     data-prefix='~'
                     className='text-xl hover:bg-rose-500 transition-all hover:text-white'
                   >
                     <code>
                       <a href={element.githublink2} target='_blank'>
-                        Check Repository (with Nest)
+                        {`Check Repository ${element.alter2}`}
                       </a>
                     </code>
                   </pre>
