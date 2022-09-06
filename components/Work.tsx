@@ -19,6 +19,7 @@ const Work: React.FC = () => {
     title: string;
     desc: string;
     githublink: string;
+    githublink2?: string;
     livelink: string;
     icons: any[];
   }[] = [
@@ -27,6 +28,7 @@ const Work: React.FC = () => {
       title: 'Patra',
       desc: 'A realtime messaging web application built with MERN & socket.io.',
       githublink: 'https://github.com/rohanshrestha09/Patra',
+      githublink2: 'https://github.com/rohanshrestha09/Patra-Nest',
       livelink: 'https://patranp.herokuapp.com',
       icons: [
         <SiMongodb size={21} title='MongoDB' />,
@@ -142,10 +144,22 @@ const Work: React.FC = () => {
                 >
                   <code>
                     <a href={element.githublink} target='_blank'>
-                      Check Repository
+                      Check Repository (with Express)
                     </a>
                   </code>
                 </pre>
+                {element.title === 'Patra' && (
+                  <pre
+                    data-prefix='~'
+                    className='text-xl hover:bg-rose-500 transition-all hover:text-white'
+                  >
+                    <code>
+                      <a href={element.githublink2} target='_blank'>
+                        Check Repository (with Nest)
+                      </a>
+                    </code>
+                  </pre>
+                )}
                 <pre
                   data-prefix='~'
                   className='text-xl hover:bg-rose-500 transition-all hover:text-white'
