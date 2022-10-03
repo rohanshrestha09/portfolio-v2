@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-const moment = require("moment");
+import mongoose from 'mongoose';
+import moment from 'moment';
 
 const MessageSchema = new mongoose.Schema(
   {
@@ -21,7 +21,7 @@ const MessageSchema = new mongoose.Schema(
     },
     sentTime: {
       type: String,
-      default: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      default: moment().format('MMMM Do YYYY, h:mm:ss a'),
     },
   },
   {
@@ -29,4 +29,4 @@ const MessageSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("User", MessageSchema);
+export default mongoose.model('User', MessageSchema);
