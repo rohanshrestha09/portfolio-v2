@@ -12,7 +12,7 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import { FaNode } from 'react-icons/fa';
-import PreTag from './PreTag';
+import Pre from './Pre';
 
 const Work: React.FC = () => {
   const works = [
@@ -72,9 +72,9 @@ const Work: React.FC = () => {
         className='mockup-code before:hidden min-w-0 bg-transparent pt-6 lg:pt-14 sm:pt-8'
         data-aos='fade-left'
       >
-        <PreTag data-prefix='$' preClassName='text-3xl lg:text-5xl'>
+        <Pre data-prefix='$' preClassName='text-3xl lg:text-5xl'>
           My Projects
-        </PreTag>
+        </Pre>
       </div>
 
       {works.map(({ title, imgSrc, desc, githublink, livelink, icons }, index: number) => (
@@ -105,9 +105,9 @@ const Work: React.FC = () => {
               }`}
             >
               <div className='mockup-code bg-transparent xl:w-[63%] overflow-hidden'>
-                <PreTag data-prefix='$' preClassName='text-xl'>
+                <Pre data-prefix='$' preClassName='text-xl'>
                   <code>{title}</code>
-                </PreTag>
+                </Pre>
 
                 <div
                   data-prefix='>'
@@ -118,23 +118,23 @@ const Work: React.FC = () => {
                   </code>
                 </div>
 
-                <PreTag
+                <Pre
                   data-prefix='~'
                   preClassName='text-xl hover:bg-rose-500 transition-all hover:text-white'
                 >
                   <a href={githublink} target='_blank'>
                     Check Repository
                   </a>
-                </PreTag>
+                </Pre>
 
-                <PreTag
+                <Pre
                   data-prefix='~'
                   preClassName='text-xl hover:bg-rose-500 transition-all hover:text-white'
                 >
                   <a href={livelink} target='_blank'>
                     View Live
                   </a>
-                </PreTag>
+                </Pre>
               </div>
 
               <div

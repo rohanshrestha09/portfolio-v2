@@ -3,7 +3,7 @@ import 'aos/dist/aos.css';
 import axios from 'axios';
 import { useMutation } from '@tanstack/react-query';
 import { RiArrowRightSLine } from 'react-icons/ri';
-import PreTag from './PreTag';
+import Pre from './Pre';
 
 const Contact: React.FC = () => {
   const [userdata, setUserdata] = useState({
@@ -46,16 +46,16 @@ const Contact: React.FC = () => {
           handleFormSubmission.mutate(userdata);
         }}
       >
-        <PreTag
+        <Pre
           data-prefix='$'
           data-aos='zoom-out'
           data-aos-duration='500'
           preClassName='md:text-[2rem] text-xl'
         >
           Contact Me
-        </PreTag>
+        </Pre>
 
-        <PreTag data-prefix='>' preClassName='text-rose-500 md:text-[2rem] text-xl'>
+        <Pre data-prefix='>' preClassName='text-rose-500 md:text-[2rem] text-xl'>
           <input
             className='bg-transparent outline-none placeholder:text-rose-500'
             placeholder='Name'
@@ -64,9 +64,9 @@ const Contact: React.FC = () => {
             onChange={onChange}
             required
           />
-        </PreTag>
+        </Pre>
 
-        <PreTag data-prefix='>' preClassName='md:text-[2rem] text-xl'>
+        <Pre data-prefix='>' preClassName='md:text-[2rem] text-xl'>
           <input
             className='bg-transparent outline-none w-3/4'
             placeholder='Email'
@@ -75,9 +75,9 @@ const Contact: React.FC = () => {
             onChange={onChange}
             required
           />
-        </PreTag>
+        </Pre>
 
-        <PreTag data-prefix='>' preClassName='md:text-[2rem] text-xl text-rose-500'>
+        <Pre data-prefix='>' preClassName='md:text-[2rem] text-xl text-rose-500'>
           <input
             className='bg-transparent outline-none placeholder:text-rose-500 w-3/4'
             placeholder='Subject'
@@ -86,9 +86,9 @@ const Contact: React.FC = () => {
             onChange={onChange}
             required
           />
-        </PreTag>
+        </Pre>
 
-        <PreTag data-prefix='>' preClassName='md:text-[2rem] inline-flex text-xl'>
+        <Pre data-prefix='>' preClassName='md:text-[2rem] inline-flex text-xl'>
           <textarea
             cols={60}
             className='resize-none col-span-full bg-transparent outline-none w-[80%]'
@@ -98,9 +98,9 @@ const Contact: React.FC = () => {
             onChange={onChange}
             required
           />
-        </PreTag>
+        </Pre>
 
-        <PreTag
+        <Pre
           data-prefix='~'
           preClassName='transition-all text-success hover:bg-success hover:text-white md:text-[2rem] text-xl'
           codeClassName='inline-flex items-center'
@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
 
             <RiArrowRightSLine />
           </>
-        </PreTag>
+        </Pre>
       </form>
     </div>
   );

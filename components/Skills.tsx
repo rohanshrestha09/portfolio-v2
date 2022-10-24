@@ -15,7 +15,7 @@ import {
   SiGit,
   SiGithub,
 } from 'react-icons/si';
-import PreTag from './PreTag';
+import Pre from './Pre';
 
 const Skills: React.FC = () => {
   const skills = [
@@ -44,9 +44,9 @@ const Skills: React.FC = () => {
         className='mockup-code before:hidden min-w-0 bg-transparent py-10 lg:py-28 sm:py-14'
         data-aos='fade-right'
       >
-        <PreTag data-prefix='$' preClassName='text-3xl lg:text-5xl'>
+        <Pre data-prefix='$' preClassName='text-3xl lg:text-5xl'>
           My Skills
-        </PreTag>
+        </Pre>
       </div>
 
       <div className='grid grid-rows-auto lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-4 grid-cols-3 md:gap-20 sm:gap-14 gap-8'>
