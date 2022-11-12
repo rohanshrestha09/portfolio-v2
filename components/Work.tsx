@@ -13,6 +13,7 @@ import {
 } from 'react-icons/si';
 import { FaNode } from 'react-icons/fa';
 import Pre from './Pre';
+import Image from 'next/image';
 
 const Work: React.FC = () => {
   const works = [
@@ -86,15 +87,15 @@ const Work: React.FC = () => {
           } xl:w-full sm:w-[40rem] w-full 2xl:h-[38rem] xl:h-[32rem] sm:h-[35rem] min-h-[33rem] sm:my-8 my-4 flex`}
           key={index}
         >
-          <img
-            src={imgSrc}
-            alt=''
+          <div
             className={`${
               index % 2 === 0 ? 'right-0' : 'left-0'
-            } xl:block hidden absolute 2xl:h-[31rem] xl:h-[25rem] w-[53%] z-10 mt-8 rounded-xl`}
-          />
+            } xl:block hidden absolute 2xl:h-[31rem] xl:h-[25rem] w-[54%] z-10 mt-8`}
+          >
+            <Image src={imgSrc} alt='' className='rounded-xl' layout='fill' quality={100} />
+          </div>
 
-          <div className='card xl:card-side xl:w-[70%] w-full h-full bg-[#2A303C]'>
+          <div className='card xl:card-side xl:w-[69%] w-full h-full bg-[#2A303C]'>
             <figure className='h-3/4 sm:h-1/2'>
               <img src={imgSrc} alt='Album' className={`xl:hidden h-full w-full`} />
             </figure>
