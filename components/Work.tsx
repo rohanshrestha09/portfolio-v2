@@ -92,10 +92,10 @@ const Work: React.FC = () => {
               index % 2 === 0 ? 'right-0' : 'left-0'
             } xl:block hidden absolute 2xl:h-[31rem] xl:h-[25rem] w-[54%] z-10 mt-8`}
           >
-            <Image src={imgSrc} alt='' className='rounded-xl' layout='fill' quality={100} />
+            <Image src={imgSrc} alt='' className='rounded-lg' layout='fill' quality={100} />
           </div>
 
-          <div className='card xl:card-side xl:w-[69%] w-full h-full bg-[#2A303C]'>
+          <div className='card xl:card-side xl:rounded-lg rounded-none xl:w-[69%] w-full h-full bg-[#2A303C]'>
             <figure className='h-3/4 sm:h-1/2'>
               <img src={imgSrc} alt='Album' className={`xl:hidden h-full w-full`} />
             </figure>
