@@ -15,7 +15,7 @@ const Nav: React.FC = () => {
       <div className='sm:text-xl text-[0.79rem] breadcrumbs'>
         <ul>
           {navItems.map(({ Icon, name }) => (
-            <li>
+            <li key={name}>
               <Icon className='mr-2' />
               <a href={`#${name.toLowerCase()}`}>{name}</a>
             </li>

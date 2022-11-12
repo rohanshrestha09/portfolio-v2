@@ -144,8 +144,8 @@ const Work: React.FC = () => {
                 } items-center`}
               >
                 <div className='flex gap-5'>
-                  {icons.map((Icon: IconType) => (
-                    <Icon size={21} />
+                  {icons.map((Icon: IconType, index) => (
+                    <Icon size={21} key={index} />
                   ))}
                 </div>
               </div>
