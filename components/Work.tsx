@@ -4,11 +4,13 @@ import { IconType } from 'react-icons';
 import {
   SiExpress,
   SiFigma,
+  SiFirebase,
   SiJquery,
   SiMongodb,
   SiNestjs,
   SiNextdotjs,
   SiReact,
+  SiRedux,
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
@@ -17,6 +19,23 @@ import Pre from './Pre';
 
 const Work: React.FC = () => {
   const works = [
+    {
+      imgSrc: '/images/blogsansar.png',
+      title: 'BlogSansar 2.0',
+      desc: 'A revamp of my previously created blogging site BlogSansar.',
+      githublink: 'https://github.com/rohanshrestha09/Blog-Express',
+      livelink: 'https://blogsansar.vercel.com',
+      icons: [
+        SiMongodb,
+        SiReact,
+        SiRedux,
+        SiTailwindcss,
+        FaNode,
+        SiExpress,
+        SiFirebase,
+        SiTypescript,
+      ],
+    },
     {
       imgSrc: '/images/patra.png',
       title: 'Patra',
@@ -34,19 +53,19 @@ const Work: React.FC = () => {
       icons: [SiMongodb, SiReact, SiTailwindcss, FaNode, SiNestjs, SiTypescript],
     },
     {
-      imgSrc: '/images/portfolio.png',
-      title: 'Portfolio Website',
-      desc: 'My own portfolio website with Next, daisyui, & TailwindCSS',
-      githublink: 'https://github.com/rohanshrestha09/Portfolio-Next',
-      livelink: 'https://rohanshrestha.vercel.app',
-      icons: [SiNextdotjs, SiTailwindcss, SiTypescript],
-    },
-    {
       imgSrc: '/images/insta.png',
       title: 'Instagram Clone',
       desc: 'Responsive Instagram Clone made with Next, TypeScript, TailwindCSS',
       githublink: 'https://github.com/rohanshrestha09/Instagram-Clone',
       livelink: 'https://igt-clone.vercel.app',
+      icons: [SiNextdotjs, SiTailwindcss, SiTypescript],
+    },
+    {
+      imgSrc: '/images/portfolio.png',
+      title: 'Portfolio Website',
+      desc: 'My own portfolio website with Next, daisyui, & TailwindCSS',
+      githublink: 'https://github.com/rohanshrestha09/Portfolio-Next',
+      livelink: 'https://rohanshrestha.vercel.app',
       icons: [SiNextdotjs, SiTailwindcss, SiTypescript],
     },
     {
