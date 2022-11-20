@@ -44,7 +44,7 @@ const Skills: React.FC = () => {
         className='mockup-code before:hidden min-w-0 bg-transparent py-10 lg:py-28 sm:py-14'
         data-aos='fade-right'
       >
-        <Pre data-prefix='$' preClassName='text-3xl lg:text-5xl'>
+        <Pre data-prefix='$' preclassname='text-3xl lg:text-5xl'>
           My Skills
         </Pre>
       </div>

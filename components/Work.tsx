@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import 'aos/dist/aos.css';
 import { IconType } from 'react-icons';
 import {
@@ -13,7 +14,6 @@ import {
 } from 'react-icons/si';
 import { FaNode } from 'react-icons/fa';
 import Pre from './Pre';
-import Image from 'next/image';
 
 const Work: React.FC = () => {
   const works = [
@@ -73,7 +73,7 @@ const Work: React.FC = () => {
         className='mockup-code before:hidden min-w-0 bg-transparent pt-6 lg:pt-14 sm:pt-8'
         data-aos='fade-left'
       >
-        <Pre data-prefix='$' preClassName='text-3xl lg:text-5xl'>
+        <Pre data-prefix='$' preclassname='text-3xl lg:text-5xl'>
           My Projects
         </Pre>
       </div>
@@ -82,9 +82,9 @@ const Work: React.FC = () => {
         <div
           data-aos={`${index % 2 === 0 ? 'fade-right' : 'fade-left'}`}
           data-aos-duration='800'
-          className={`${
+          className={`flex ${
             index % 2 === 0 ? 'justify-start' : 'justify-end'
-          } xl:w-full sm:w-[40rem] w-full 2xl:h-[38rem] xl:h-[32rem] sm:h-[35rem] min-h-[33rem] sm:my-8 my-4 flex`}
+          } xl:w-full sm:w-[40rem] w-full 2xl:h-[38rem] xl:h-[32rem] sm:h-[35rem] min-h-[33rem] sm:my-8 my-4`}
           key={index}
         >
           <div
@@ -96,8 +96,8 @@ const Work: React.FC = () => {
           </div>
 
           <div className='card xl:card-side xl:rounded-lg rounded-none xl:w-[69%] w-full h-full bg-[#2A303C]'>
-            <figure className='h-3/4 sm:h-1/2'>
-              <img src={imgSrc} alt='Album' className={`xl:hidden h-full w-full`} />
+            <figure className='h-full sm:h-1/2'>
+              <img src={imgSrc} alt='Album' className={`xl:hidden object-contain h-full w-full`} />
             </figure>
 
             <div
@@ -106,7 +106,7 @@ const Work: React.FC = () => {
               }`}
             >
               <div className='mockup-code bg-transparent xl:w-[63%] overflow-hidden'>
-                <Pre data-prefix='$' preClassName='text-xl'>
+                <Pre data-prefix='$' preclassname='text-xl'>
                   <code>{title}</code>
                 </Pre>
 
@@ -121,7 +121,7 @@ const Work: React.FC = () => {
 
                 <Pre
                   data-prefix='~'
-                  preClassName='text-xl hover:bg-rose-500 transition-all hover:text-white'
+                  preclassname='text-xl hover:bg-rose-500 transition-all hover:text-white'
                 >
                   <a href={githublink} target='_blank'>
                     Check Repository
@@ -130,7 +130,7 @@ const Work: React.FC = () => {
 
                 <Pre
                   data-prefix='~'
-                  preClassName='text-xl hover:bg-rose-500 transition-all hover:text-white'
+                  preclassname='text-xl hover:bg-rose-500 transition-all hover:text-white'
                 >
                   <a href={livelink} target='_blank'>
                     View Live

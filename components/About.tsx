@@ -7,20 +7,20 @@ const About: React.FC = () => {
       <div className='mockup-code overflow-hidden before:w-[0.9rem] before:h-[0.9rem] bg-transparent flex md:gap-[3.81rem] gap-[2.15rem] flex-col'>
         <Pre
           data-prefix='$'
-          preClassName='md:text-[2rem] text-xl'
-          codeClassName='text-md md:text-[1.7rem]'
+          preclassname='md:text-[2rem] text-xl'
+          codeclassname='text-md md:text-[1.7rem]'
         >
           जोजोल्पा!
         </Pre>
 
-        <Pre data-prefix='>' preClassName='md:text-[2rem] text-xl' codeClassName='inline-flex'>
+        <Pre data-prefix='>' preclassname='md:text-[2rem] text-xl' codeclassname='inline-flex'>
           <>
             <p className='text-rose-500'>I'm Rohan Shrestha.</p>
             <p className='pl-1 hidden sm:block animation'>I'm a Web Developer.</p>
           </>
         </Pre>
 
-        <Pre data-prefix='>' preClassName='md:text-[2rem] text-xl sm:hidden block animation'>
+        <Pre data-prefix='>' preclassname='md:text-[2rem] text-xl sm:hidden block animation'>
           I'm a Web Developer.
         </Pre>
 
@@ -51,8 +51,8 @@ const About: React.FC = () => {
           data-prefix='~'
           data-aos='zoom-out'
           data-aos-duration='800'
-          preClassName='transition-all text-success hover:bg-success hover:text-white md:text-[2rem] text-xl'
-          codeClassName='inline-flex'
+          preclassname='transition-all text-success hover:bg-success hover:text-white md:text-[2rem] text-xl'
+          codeclassname='inline-flex'
         >
           <a href='#works' className='flex items-center'>
             View my Projects

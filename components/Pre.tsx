@@ -1,15 +1,15 @@
 interface Props {
-  preClassName?: string;
-  codeClassName?: string;
+  preclassname?: string;
+  codeclassname?: string;
   children: JSX.Element | string;
 }
 
 const PreTag: React.FC<Props> = (props) => {
-  const { preClassName, codeClassName, children } = props;
+  const { preclassname, codeclassname, children } = props;
 
   return (
-    <pre className={preClassName} {...props}>
-      <code className={codeClassName}>{children}</code>
+    <pre className={preclassname} {...props}>
+      <code className={codeclassname}>{children}</code>
     </pre>
   );
 };

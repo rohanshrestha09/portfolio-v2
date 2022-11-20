@@ -50,12 +50,12 @@ const Contact: React.FC = () => {
           data-prefix='$'
           data-aos='zoom-out'
           data-aos-duration='500'
-          preClassName='md:text-[2rem] text-xl'
+          preclassname='md:text-[2rem] text-xl'
         >
           Contact Me
         </Pre>
 
-        <Pre data-prefix='>' preClassName='text-rose-500 md:text-[2rem] text-xl'>
+        <Pre data-prefix='>' preclassname='text-rose-500 md:text-[2rem] text-xl'>
           <input
             className='bg-transparent outline-none placeholder:text-rose-500'
             placeholder='Name'
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
           />
         </Pre>
 
-        <Pre data-prefix='>' preClassName='md:text-[2rem] text-xl'>
+        <Pre data-prefix='>' preclassname='md:text-[2rem] text-xl'>
           <input
             className='bg-transparent outline-none w-3/4'
             placeholder='Email'
@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
           />
         </Pre>
 
-        <Pre data-prefix='>' preClassName='md:text-[2rem] text-xl text-rose-500'>
+        <Pre data-prefix='>' preclassname='md:text-[2rem] text-xl text-rose-500'>
           <input
             className='bg-transparent outline-none placeholder:text-rose-500 w-3/4'
             placeholder='Subject'
@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
           />
         </Pre>
 
-        <Pre data-prefix='>' preClassName='md:text-[2rem] inline-flex text-xl'>
+        <Pre data-prefix='>' preclassname='md:text-[2rem] inline-flex text-xl'>
           <textarea
             cols={60}
             className='resize-none col-span-full bg-transparent outline-none w-[80%]'
@@ -102,8 +102,8 @@ const Contact: React.FC = () => {
 
         <Pre
           data-prefix='~'
-          preClassName='transition-all text-success hover:bg-success hover:text-white md:text-[2rem] text-xl'
-          codeClassName='inline-flex items-center'
+          preclassname='transition-all text-success hover:bg-success hover:text-white md:text-[2rem] text-xl'
+          codeclassname='inline-flex items-center'
         >
           <>
             <button
