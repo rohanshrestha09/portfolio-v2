@@ -27,7 +27,7 @@ const Work: React.FC = () => {
       livelink: "https://blogsansar.live",
       icons: [
         SiMongodb,
-        SiReact,
+        SiNextdotjs,
         SiRedux,
         SiTailwindcss,
         FaNode,
@@ -115,10 +115,7 @@ const Work: React.FC = () => {
       </div>
 
       {works.map(
-        (
-          { title, imgSrc, desc, githublink, livelink, icons },
-          index: number
-        ) => (
+        ({ title, imgSrc, desc, githublink, livelink, icons }, index) => (
           <div
             data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
             data-aos-duration="800"
@@ -156,19 +153,18 @@ const Work: React.FC = () => {
                   index % 2 === 0 ? "xl:items-start" : "xl:items-end"
                 }`}
               >
-                <div className="mockup-code bg-transparent xl:w-[63%] overflow-hidden">
+                <div className="mockup-code bg-transparent xl:w-[63%] overflow-hidden flex flex-col gap-1">
                   <Pre data-prefix="$" preclassname="text-xl">
                     <code>{title}</code>
                   </Pre>
 
-                  <div
+                  <Pre
+                    div
                     data-prefix=">"
-                    className="text-success text-xl inline-flex before:content-['>'] before:w-0 before:opacity-[0.5] pr:[1.25rem] before:mr-[1.8ch] break-words"
+                    preclassname="text-success text-xl inline-flex before:content-['>'] before:w-0 before:opacity-[0.5] pr:[1.25rem] before:mr-[1.8ch] break-words"
                   >
-                    <code>
-                      <p>{desc}</p>
-                    </code>
-                  </div>
+                    <p>{desc}</p>
+                  </Pre>
 
                   <Pre
                     data-prefix="~"
