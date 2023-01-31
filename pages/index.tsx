@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     AOS.init();
   }, []);
   return (
-    <div className="w-full overflow-x-hidden 2xl:px-72 xl:px-44 lg:px-20 px-7 bg-[rgb(40,42,57)] text-white font-sans">
+    <div className="w-full overflow-x-hidden xl:px-[15.5vw] lg:px-20 px-7 bg-[rgb(40,42,57)] text-white font-sans">
       <Head>
         <title>Rohan Shrestha</title>
         <link rel="icon" href="/favicon.ico" />
