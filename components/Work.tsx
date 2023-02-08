@@ -41,7 +41,7 @@ const Work: React.FC = () => {
       title: "Patra",
       desc: "A realtime messaging web application built with MERN & socket.io.",
       githublink: "https://github.com/rohanshrestha09/Patra",
-      livelink: "https://patra.azurewebsites.net",
+      livelink: " https://patra-nc95.onrender.com",
       icons: [
         SiMongodb,
         SiReact,
