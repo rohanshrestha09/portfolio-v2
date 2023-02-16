@@ -106,7 +106,7 @@ const Work: React.FC = () => {
       id="works"
     >
       <div
-        className="mockup-code before:hidden min-w-0 bg-transparent pt-6 lg:pt-14 sm:pt-8"
+        className="mockup-code before:hidden min-w-0 bg-transparent"
         data-aos="fade-left"
       >
         <Pre data-prefix="$" preclassname="text-3xl lg:text-5xl">
@@ -117,11 +117,11 @@ const Work: React.FC = () => {
       {works.map(
         ({ title, imgSrc, desc, githublink, livelink, icons }, index) => (
           <div
-            data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
-            data-aos-duration="800"
+            // data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
+            // data-aos-duration="800"
             className={`flex ${
               index % 2 === 0 ? "justify-start" : "justify-end"
-            } xl:w-full sm:w-[40rem] w-full 2xl:h-[38rem] xl:h-[32rem] sm:h-[35rem] min-h-[33rem] sm:my-8 my-4`}
+            } xl:w-full sm:w-[40rem] w-full 2xl:h-[38rem] xl:h-[32rem] min-h-fit sm:my-8 my-6`}
             key={index}
           >
             <div
