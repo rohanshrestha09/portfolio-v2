@@ -24,7 +24,7 @@ const Work: React.FC = () => {
       title: "BlogSansar 2.0",
       desc: "A revamp of my previously created blogging site BlogSansar.",
       githublink: "https://github.com/rohanshrestha09/Blog-Express",
-      livelink: "https://blogsansar.live",
+      livelink: "https://blogsansar.live/",
       icons: [
         SiMongodb,
         SiNextdotjs,
@@ -41,7 +41,7 @@ const Work: React.FC = () => {
       title: "Patra",
       desc: "A realtime messaging web application built with MERN & socket.io.",
       githublink: "https://github.com/rohanshrestha09/Patra",
-      livelink: " https://patra-nc95.onrender.com",
+      livelink: "https://patra-production.up.railway.app/",
       icons: [
         SiMongodb,
         SiReact,
@@ -56,7 +56,7 @@ const Work: React.FC = () => {
       title: "BlogSansar",
       desc: `A site that lets you read and create your own blogs.`,
       githublink: "https://github.com/rohanshrestha09/Blog-Nest",
-      livelink: "https://blog-nest.vercel.app",
+      livelink: "https://blog-nest.vercel.app/",
       icons: [
         SiMongodb,
         SiReact,
@@ -71,7 +71,7 @@ const Work: React.FC = () => {
       title: "Instagram Clone",
       desc: "Responsive Instagram Clone made with Next, TypeScript, TailwindCSS",
       githublink: "https://github.com/rohanshrestha09/Instagram-Clone",
-      livelink: "https://igt.vercel.app",
+      livelink: "https://igt.vercel.app/",
       icons: [SiNextdotjs, SiTailwindcss, SiTypescript],
     },
     {
@@ -79,7 +79,7 @@ const Work: React.FC = () => {
       title: "Portfolio Website",
       desc: "My own portfolio website with Next, daisyui, & TailwindCSS",
       githublink: "https://github.com/rohanshrestha09/Portfolio-Next",
-      livelink: "https://rohanshrestha.vercel.app",
+      livelink: "https://rohanshrestha.vercel.app/",
       icons: [SiNextdotjs, SiTailwindcss, SiTypescript],
     },
     {
