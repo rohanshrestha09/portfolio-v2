@@ -117,8 +117,8 @@ const Work: React.FC = () => {
       {works.map(
         ({ title, imgSrc, desc, githublink, livelink, icons }, index) => (
           <div
-            // data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
-            // data-aos-duration="800"
+            data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
+            data-aos-duration="800"
             className={`flex ${
               index % 2 === 0 ? "justify-start" : "justify-end"
             } xl:w-full sm:w-[40rem] w-full 2xl:h-[38rem] xl:h-[32rem] min-h-fit sm:my-8 my-6`}
