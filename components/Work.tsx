@@ -102,7 +102,7 @@ const Work: React.FC = () => {
 
   return (
     <div
-      className="w-full flex flex-col items-center overflow-hidden relative"
+      className="w-full sm:pt-24 flex flex-col items-center overflow-hidden relative"
       id="works"
     >
       <div
