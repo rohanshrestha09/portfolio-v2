@@ -5,9 +5,13 @@ interface Props {
   children: JSX.Element | string;
 }
 
-const PreTag: React.FC<Props> = (props) => {
-  const { preclassname, codeclassname, div, children } = props;
-
+const Pre: React.FC<Props> = ({
+  preclassname,
+  codeclassname,
+  div,
+  children,
+  ...props
+}) => {
   return div ? (
     <div className={preclassname} {...props}>
       <code className={codeclassname}>{children}</code>
@@ -19,4 +23,4 @@ const PreTag: React.FC<Props> = (props) => {
   );
 };
 
-export default PreTag;
+export default Pre;
