@@ -11,8 +11,8 @@ const Nav: React.FC = () => {
   ];
 
   return (
-    <nav className="z-20 w-full fixed left-0 top-0 sm:h-[4rem] h-[3rem] flex items-end xl:px-[15.5vw] lg:px-20 px-7 bg-[rgb(40,42,57)]">
-      <div className="sm:text-xl text-[0.79rem] breadcrumbs">
+    <nav className="fixed left-0 top-0 z-20 flex h-[3rem] w-full items-end bg-[rgb(40,42,57)] px-7 sm:h-[4rem] lg:px-20 xl:px-[15.5vw]">
+      <div className="breadcrumbs text-[0.79rem] sm:text-xl">
         <ul>
           {navItems.map(({ Icon, name }) => (
             <li key={name}>

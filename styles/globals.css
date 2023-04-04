@@ -2,11 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 30px;
 }
-.animation {
+
+/* .animation {
   border-right: solid 5px rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
@@ -41,6 +43,11 @@ html {
       width: 260px;
     }
   }
+} */
+
+pre[data-prefix=">"],
+pre[data-prefix="~"] {
+  font-family: Poppins;
 }
 
 .mockup-code pre[data-prefix]:before {
