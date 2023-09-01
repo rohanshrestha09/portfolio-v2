@@ -1,26 +1,40 @@
-import mongoose from "mongoose";
-import { NextApiRequest, NextApiResponse } from "next";
-import User from "../../model/contact";
+import type { NextApiRequest, NextApiResponse } from "next";
+
+import nodemailer from "nodemailer";
+
+type Data = {
+  message: string;
+};
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse<Data>,
 ) {
-  // @ts-ignore
-  mongoose.connect(process.env.MONGODB_URI);
-
-  const { name, email, subject, message } = req.body;
   if (req.method === "POST") {
-    try {
-      await User.create({
-        name,
-        email,
-        subject,
-        message,
-      });
-      return res.status(201).json("success");
-    } catch (err: any) {
-      return res.status(400).json(err.message);
-    }
+    const { name, subject, email, message } = JSON.parse(req.body);
+
+    const transporter = nodemailer.createTransport({
+      //@ts-ignore
+      service: "gmail",
+      host: "smtp.gmail.com",
+      auth: {
+        user: process.env.MAILING_EMAIL,
+        pass: process.env.MAILING_PASSWORD,
+      },
+      port: "465",
+    });
+
+    await transporter.sendMail({
+      from: `${name} ${email}`,
+      to: process.env.RECEIVER_MAIL,
+      subject,
+      html: `
+            <p>Email: ${String(email)}</p>
+            <p>Name: ${name}</p> 
+            <p>${message}</p>
+         `,
+    });
+
+    res.status(200).json({ message: "Successful" });
   }
 }
