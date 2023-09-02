@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "aos/dist/aos.css";
-import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Pre from "./Pre";
@@ -23,10 +22,14 @@ const Contact: React.FC = () => {
   };
 
   const handleFormSubmission = useMutation(
-    (data: typeof userData) => axios.post("/api/contact", data),
+    (data: typeof userData) =>
+      fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+      }),
     {
       onSuccess: () => setUserData(initialValue),
-    }
+    },
   );
 
   return (
